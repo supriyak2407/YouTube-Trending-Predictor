@@ -44,6 +44,7 @@ Engagement metrics refer to the quantitative measures that assess the level of i
 •	Converted the categorical columns "title" and "tags" into numerical columns.
 
 For the "title" column:
+
 •	Removed non-ASCII values from the column.
 
 •	Loaded stop words from the NLTK library to eliminate stop words from the column.
@@ -55,6 +56,7 @@ For the "title" column:
 •	Calculated the sum of the values of each row and placed those values in a new column called "title_frequency_sum."
 
 For the "tags" column:
+
 •	Rows of tags have values like "Disney|Disney Dreamlight Valley|Gameloft," where the tags of the YouTube videos are separated using the "|" character.           
 
 •	 Splitted these tags using the "|" character and calculated the total occurrences of the tags in the entire column.
@@ -69,6 +71,21 @@ For the "tags" column:
 
 •	Split the dataset into three sections: Train (50%), Tune (25%), and Test (25%).
 
+##Procedure
+
+•	Selected Decision Tree Regressor, Random Forest Regressor,XG Boost, Tuned XGBoost, KNN and MLP as the models to predict the "Y_label."
+
+•	Initially trained all the models using the Training dataset (50%).
+
+•	Then,used the tuned dataset for hyperparameter tuning and found the best parameters for each model.
+
+•	Tested these three models on the Test set (25%), compared the results, and concluded on the best model.
+
+•	Further, based on the results obtained, realized that the Decision Tree model was overfitting the dataset. Hence, extended the scope of the project and performed feature scaling and pruning on the Decision Tree model.
+
+•	Similarly, for XG Boost, extended and tuned the XG Boost model, thereby implementing tuned XG Boost. 
+
+• All the models were evaluated on R^2 score. It ranges from 0 to 1. 1 implies that the performance of the model is exceptional while 0 indicates that the performance of the model is very poor.
 
 ## Results
 
