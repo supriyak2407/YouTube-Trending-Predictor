@@ -25,25 +25,9 @@ The ability to forecast popular videos may lead to higher viewing, subscription 
 
 ## Dataset
 The YouTube Trending Video Dataset from Kaggle is used for this project. This dataset is a structured and enhanced version of YouTube's own compilation of top-trending videos. It spans multiple regions, including India, the United States, Great Britain, Germany, Canada, France, Russia,Brazil, Mexico, South Korea, and Japan out of which we chose the dataset corresponding to the United States region.  Our original dataset (before pre-processing) consisted of 16 attributes and 236787 data points. The attributes were: video_id,title, publishedAt, channelId, channelTitle, categoryId, trending_date,  view_count, description, likes, dislikes, comment_count, tags, thumbnail_link, comments_disabled, ratings_disabled.
-The brief description of each attribute is as follows:
-•	video_id: It is a unique identifier for each video.
-•	title: It states the title of the video
-•	publishedAt: The date and time when the video was published.
-•	channelId: Unique identifier for the channel that uploaded the video.
-•	channelTitle: The name of the channel.
-•	categoryId: The category to which the video belongs.
-•	trending_date: The date when the video appeared in the list of trending videos.
-•	tags: Tags associated with the video.
-•	view_count: The number of views the video has received.
-•	likes: The number of likes the video has received.
-•	dislikes: The number of dislikes the video has received.
-•	comment_count: The number of comments on the video.
-•	thumbnail_link: The link to the thumbnail image for the video.
-•	comments_disabled: Boolean value that indicates whether comments are disabled for the video.
-•	ratings_disabled: Boolean value that indicates whether ratings are disabled for the video.
-•	description: The description provided for the video.
+The brief description of each attribute and other details regarding the dataset are available on this website: https://www.kaggle.com/datasets/rsrishav/youtube-trending-video-dataset
 
-Engagement metrics refer to the quantitative measures that assess the level of interaction, participation, and involvement that users have with a particular piece of content or platform. In our dataset, the engagement metrics are:
+Engagement metrics refer to the quantitative measures that assess the level of interaction, participation, and involvement that users have with a particular piece of content or platform. In this dataset, the engagement metrics are:
 •	view_count: The number of times the video has been viewed, a key indicator of popularity.
 •	likes: Reflects the positive engagement from viewers.
 •	dislikes: Indicates the level of controversy or disagreement surrounding the video.
@@ -52,25 +36,37 @@ Engagement metrics refer to the quantitative measures that assess the level of i
 ## Data Preprocessing
 
 •	Loaded the data in a dataframe.
+
 •	Created a new column, "days_to_trend," by calculating the difference between the existing columns "trending_Date" and "published_date."
+
 •	Dropped all the rows containing null values from the dataframe.
+
 •	Converted the categorical columns "title" and "tags" into numerical columns.
 
 For the "title" column:
 •	Removed non-ASCII values from the column.
+
 •	Loaded stop words from the NLTK library to eliminate stop words from the column.
+
 •	Updated the original dataframe after making the above changes.
+
 •	Obtained the total frequency of each unique word in the column and replaced the word with that frequency, ensuring each row in the "title" column is a list of total frequency values in the column.
+
 •	Calculated the sum of the values of each row and placed those values in a new column called "title_frequency_sum."
 
 For the "tags" column:
-•	Rows of tags have values like "Disney|Disney Dreamlight Valley|Gameloft," where the tags of the YouTube videos are separated using the "|" character.                      
+•	Rows of tags have values like "Disney|Disney Dreamlight Valley|Gameloft," where the tags of the YouTube videos are separated using the "|" character.           
+
 •	 Splitted these tags using the "|" character and calculated the total occurrences of the tags in the entire column.
+
 •	Similar to "title," calculated the sum of the values of tags in each row and placed those values in a new column called "tag_frequency_sum."
 
 ##Feature Selection & Dataset Splitting
+
 •	Used the relevant existing and two new numerical columns from the dataset as features. These columns are ['likes', 'dislikes', 'comment_count', 'categoryId', 'title_frequency_sum', 'tag_frequency_sum', 'days_to_trend'].
+
 •	Considered "view_count" as the "Y_label."
+
 •	Split the dataset into three sections: Train (50%), Tune (25%), and Test (25%).
 
 
