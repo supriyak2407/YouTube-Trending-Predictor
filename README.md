@@ -9,7 +9,7 @@ The goal of this project is to develop predictive models that accurately anticip
 
 - [Objectives and Significance](#objectives-and-significance)
 - [Dataset](#dataset)
-- [Data Preprocessing](#data-prerocessing)
+- [Data Preprocessing](#data-preprocessing)
 - [Methods](#methods)
 - [Procedure](#procedure)
 - [Results](#results)
