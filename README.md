@@ -71,7 +71,7 @@ For the "tags" column:
 
 •	Split the dataset into three sections: Train (50%), Tune (25%), and Test (25%).
 
-##Procedure
+ ##Procedure
 
 •	Selected Decision Tree Regressor, Random Forest Regressor,XG Boost, Tuned XGBoost, KNN and MLP as the models to predict the "Y_label."
 
@@ -87,7 +87,7 @@ For the "tags" column:
 
 • All the models were evaluated on R^2 score. It ranges from 0 to 1. 1 implies that the performance of the model is exceptional while 0 indicates that the performance of the model is very poor.
 
-## Results
+ ## Results
 
 Details the results obtained from the implemented models, including data visualizations, R-squared scores, and comparisons between different models. 
 
