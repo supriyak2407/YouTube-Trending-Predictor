@@ -1,5 +1,5 @@
 # Forecasting-YouTube-Content
-Developed many predictive models in order to predict popular YouTube content
+Developed many predictive models in order to predict popular YouTube content.
 
 ## Overview
 
@@ -10,7 +10,6 @@ The goal of this project is to develop predictive models that accurately anticip
 - [Objectives and Significance](#objectives-and-significance)
 - [Dataset](#dataset)
 - [Data Preprocessing](#data-preprocessing)
-- [Methods](#methods)
 - [Procedure](#procedure)
 - [Results](#results)
 - [Conclusion](#conclusion)
