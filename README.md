@@ -9,10 +9,11 @@ The goal of this project is to develop predictive models that accurately anticip
 
 - [Objectives and Significance](#objectives-and-significance)
 - [Dataset](#dataset)
+- [Data Preprocessing](#data-prerocessing)
 - [Methods](#methods)
+- [Procedure](#procedure)
 - [Results](#results)
 - [Conclusion](#conclusion)
-- [Usage](#usage)
 - [Future Scope](#future-scope)
 
 
@@ -88,26 +89,14 @@ For the "tags" column:
 • All the models were evaluated on R^2 score. It ranges from 0 to 1. 1 implies that the performance of the model is exceptional while 0 indicates that the performance of the model is very poor.
 
  ## Results
+The results can be seen in the Jupyter Notebook file uploaded. 
+After comparing all the models, the Tuned XGBoost model emerges as the most effective which was followd by the Random Forests model.The standard XGBoost model was slightly trailing behind with an R-squared score of 0.9201. The KNN model with an R-squared score of 0.8516 demonstrates notable effectiveness. The MLP model has an R-squared score that is slightly less than that of the KNN model but it still is a good R-squared score.Conversely, the Decision Trees model lags behind the others with an R-squared score of 0.8414. This value is slightly less than MLP model. This lower value indicates a comparatively diminished ability to explain variance in the target variable.Tuned XGBoost, XGBoost and Random Forest clearly perform well than the other three models.
 
-Details the results obtained from the implemented models, including data visualizations, R-squared scores, and comparisons between different models. 
 
 ## Conclusion
+After comparing all the models, the Tuned XGBoost model emerges as the most effective which was followd by the Random Forests model.The standard XGBoost model was slightly trailing behind with an R-squared score of 0.9201. The KNN model with an R-squared score of 0.8516 demonstrates notable effectiveness. The MLP model has an R-squared score that is slightly less than that of the KNN model but it still is a good R-squared score.Conversely, the Decision Trees model lags behind the others with an R-squared score of 0.8414. This value is slightly less than MLP model. This lower value indicates a comparatively diminished ability to explain variance in the target variable.Tuned XGBoost, XGBoost and Random Forest clearly perform well than the other three models.
 
-Summarizes the findings, highlights the best-performing models, and offers insights into the project's success. It may also mention limitations and potential areas for improvement.
-
-## Usage
-
-Provides instructions on how to clone the repository, set up the environment, and run the code. Include any dependencies or specific configurations required.
 
 ## Future Scope
 
-Outlines potential future enhancements or expansions for the project, such as incorporating image features, diversifying the dataset, or transforming the task into a binary classification problem.
-
-## Contributing
-
-If you wish to contribute to this project, please follow the guidelines outlined in the CONTRIBUTING.md file.
-
-## License
-
-This project is licensed under the [MIT License](LICENSE).
-
+The future scope for this project could be to incorporate Thumbnail link attribute and utilize Convolutional Neural Networks (CNNs) to extract features and patterns from these images. This can provide a more comprehensive understanding of the content's visual appeal, potentially improving the prediction accuracy.Another way is to diversify the dataset by including content from various countries. This expansion allows the model to learn and adapt to cultural and regional differences in trending content. Consideration of language, cultural nuances, and regional preferences could lead to a more robust and globally applicable model.One might consider to extend the project by including a dataset of non-trending videos. This would transform the task into a binary classification problem: predicting whether a video will trend or not. Introducing this aspect can provide valuable insights into factors that contribute to a video's success beyond sheer view count, helping content creators understand what makes a video stand out.
